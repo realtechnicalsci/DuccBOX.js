@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/font/SFPro/sfwin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/git/THREE.Multiplayer" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/git/chat-example" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/git/offroadJS" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/git/threejs-scroll-animation-demo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/js/GIT/threex.daynight" vcs="Git" />
+  </component>
+</project>

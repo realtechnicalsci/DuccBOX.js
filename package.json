@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "cannon": "github:schteppe/cannon.js",
+    "firebase": "^8.8.1"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "hosting": {
+    "public": "/",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "firestore": {
+    "rules": "vendor\\2635f27e2b8910ef\\firestore.rules",
+    "indexes": "vendor\\2635f27e2b8910ef\\firestore.indexes.json"
+  }
+}

@@ -1,0 +1,1 @@
+const DomSound =  document.getElementById('theme').play();
