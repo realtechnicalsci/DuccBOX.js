@@ -34735,7 +34735,7 @@ class MeshStandardMaterial extends Material {
 		this.metalnessMap = null;
 
 		this.alphaMap = null;
-this
+console.log(this);
 		this.envMap = null;
 		this.envMapIntensity = 1.0;
 

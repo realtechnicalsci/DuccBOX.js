@@ -10,8 +10,6 @@ import * as THREE from "./three.module.js";
 import { OrbitControls } from "./OrbitControls.js";
 import { GUI } from "./dat.gui.module.js";
 import { PointerLockControls } from "./PointerLockControls.js";
-import { FBXLoader } from "./node_modules/three/examples/jsm/loaders/FBXLoader.js";
-import { SkeletonUtils } from "./node_modules/three/examples/jsm/utils/SkeletonUtils.js";
 import "./cannon.min.js";
 import "./firebase/firebase-app.js";
 import "./firebase/firebase-analytics.js";
@@ -147,7 +145,6 @@ function init() {
     1000
   );
   loader = new GLTFLoader(manager);
-  const _FBX_ = new FBXLoader(manager);
 
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth, window.innerHeight);
