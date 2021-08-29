@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="img/app.svg">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | DuccBOX</title>
+    <script src="./js/account-mgr.js" defer type="module"></script>
+    <style>
+        @import url('./css/bootstrap.min.css');
+    .dark-mode {
+      background-color: black;
+      color: white;
+    }
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    input:focus {
+background-color: lightblue;
+}</style>
+</body class="dark-theme || light-theme">
+<samp><div class="Main1" style="margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;"><form id="formLogin" action="" data-sitekey="6LeBxTAcAAAAAJxH_6isEIsW2jTKqbp40Z815LSj">
+      <input  id="inputLogin" autocomplete="off" type="email" value="Account@email.com"/>
+      <input id="passLogin" autocomplete="off" value="password" />
+      <p id="status"></p>
+      <p id='code'></p>
+      <button id='login'>login</button><div id='account-mgr' style="display: none;"><h1>Account Manager</h1></br>
+  <button id='ducc' style="background-color: #7c7878; /* Green */
+      border: none;
+      color: rgb(0, 0, 0);
+      padding: 10px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 10px;">Login To Account</button><br/><br/>
+    <button style="background-color: #7c7878; /* Green */
+      border: none;
+      color: rgb(0, 0, 0);
+      padding: 10px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 10px;" onclick='var element = document.body; element.classList.toggle("dark-mode");'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+  </svg></button>
+  </form></div>
+  <div id="mgr" style="display: none;"><h1>Account Manager</h1>
+  <p id='welcome-msg'></p></br>
+  <button id="ch-userN">Account Username</button>
+  <div id="ch-name" style="display: none;">
+      <input type="text" id="input-name-box" value="new-username">
+      <button id="set-new-name">set name</button>
+  </div>
+  </div></samp>
+
+</html>

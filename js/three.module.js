@@ -24694,6 +24694,8 @@ function WebGLMaterials( properties ) {
 function createCanvasElement() {
 
 	const canvas = document.createElementNS( 'http://www.w3.org/1999/xhtml', 'canvas' );
+	canvas.className = 'three_canvas'
+	canvas.id = 'three'
 	canvas.style.display = 'block';
 	return canvas;
 
@@ -34735,7 +34737,6 @@ class MeshStandardMaterial extends Material {
 		this.metalnessMap = null;
 
 		this.alphaMap = null;
-console.log(this);
 		this.envMap = null;
 		this.envMapIntensity = 1.0;
 

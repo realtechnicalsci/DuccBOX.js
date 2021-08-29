@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+    <meta charset="UTF-8" />
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" type="image/svg+xml" href="img/app.svg">
+    <meta property="og:title" content="DuccBOX an open world sandbox" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://duccboxjs-281f7.web.app" />
+    <meta property="og:image" content="https://duccboxjs-281f7.web.app/img/logo.png" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="DuccBOX M1 is an Open world sandbox made with WebGL/Three.js"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DuccBOX an open world sandbox</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="./js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="module" defer id='index' src="./test.js"></script>
+  </head>
+  <body>
+<div id ='Wrappder'><div style="position: fixed;" id='DuccBOX'>
+  <p class="rev" onclick="let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
+  width=600,height=300,left=100,top=100`;
+  
+  open('/Milestone-builds.html', 'test', params);" id="rev">______|DuccBOX.js REV [REV_ID]</p>7
+  <br/>
+  <p class="cords" id="cords"></p><br/>
+  <p id="username"></p>
+  <p id="prog"></p>
+  <p id='id1'></p>
+ <h1 id='kicked'></h1>
+ <div id='Help' style="border-style: solid; position: fixed;">
+   <samp><p>DuccBOX.js controls.</p>
+     <p><kbd>W</kbd>forward</p></br>
+     <p><kbd>A</kbd>left</p></br>
+     <p><kbd>S</kbd>backword</p></br>
+     <p><kbd>D</kbd>left</p></br>
+     <p><kbd>R</kbd>Rotate right</p></br>
+     <p><kbd>E</kbd>Rotate left</p></br>
+     <p><kbd onclick="document.getElementById('Help').remove();">Close Help</kbd></br></samp>
+ </div>
+  <input style="bottom: 0;
+  position: fixed;" type="file"  id="MOD"><br/>
+  <br/>
+  <div id="chat" style="position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 240px">    <ul id="messages"></ul>
+    <form id="form"  action="">
+      <input id="input" autocomplete="off" />
+      <button style="background-color: #7c7878; /* Green */
+      border: none;
+      color: rgb(0, 0, 0);
+      padding: 10px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 10px;">Send</button>
+    </form></div>
+    <div id='eRR' style="
+    display: none;
+    margin: auto;
+    width: 50%;
+    border: 3px solid rgb(148, 37, 37);
+    padding: 10px;">
+ <samp><h1>DuccBOX.js object [cube10] has peformed an ilegal aciton</h1></br>
+   <kbd onclick="document.getElementById('eRR').style.display = 'none'">Close Window</kbd></samp>
+    </div>
+   </div> 
+   <div id='DuccBOXF3' style="display: none;
+   position: fixed;
+   border-style: solid;">
+   </br>
+ </br>
+ </br>
+ </br>
+ <script> window.addEventListener("keydown", function () {
+   switch (event.keyCode) {
+     case 52:
+ document.getElementById('DuccBOXF3').style.display = 'none';
+ document.getElementById('DuccBOX').style.display = 'block';
+       break;
+   }
+ 
+ })  </script>
+ <div>
+   <samp><kbd>DuccBOX.js 4.0 M2</kbd>
+ </br>
+ <p id='F3CORDS'></p></br>
+ <p id='F3RENDER'></p></br>
+ <p id='F3WINDOW'></p></br>
+ <p id='F3HEAP'></p></br>
+ <p id="F3DATE"></p></br>
+</samp>
+ </div>
+   </div></div>
+  </body>
+</html>

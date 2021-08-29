@@ -1,6 +1,8 @@
-{"$schema": "http://json-schema.org/schema",
-"lang": "en-us",
-"name": "DuccBOX.js",
-"background_color": "gray",
-"short_name": "DuccBOX",
-"orientation": "landscape"}
+{
+  "$schema": "http://json-schema.org/schema",
+  "lang": "en-us",
+  "name": "DuccBOX.js",
+  "background_color": "gray",
+  "short_name": "DuccBOX",
+  "orientation": "landscape"
+}
