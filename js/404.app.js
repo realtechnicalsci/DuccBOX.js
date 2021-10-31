@@ -4,7 +4,7 @@ let renderer, scene, camera, stats;
 let line, uniforms;
 
 const loader = new THREE.FontLoader();
-loader.load( 'helvetiker_bold.typeface.json', function ( font ) {
+loader.load( '/helvetiker_bold.typeface.json', function ( font ) {
 
   init( font );
   animate();
@@ -39,12 +39,12 @@ function init( font ) {
   } );
 
 
-  const geometry = new THREE.TextGeometry( '404', {
+  const geometry = new THREE.TextGeometry( 'HTTP/1.1 404', {
 
     font: font,
 
-    size: 50,
-    height: 15,
+    size: 40,
+    height: 10,
     curveSegments: 10,
 
     bevelThickness: 5,
@@ -131,6 +131,6 @@ function render() {
 
   attributes.displacement.needsUpdate = true;
 
-  renderer.render( scene, camera );
+  renderer.render ( scene, camera );
 
 }

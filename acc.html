@@ -18,12 +18,18 @@
     }
     input:focus {
 background-color: lightblue;
-}</style>
+}
+.bata{
+  bottom: 0;
+  left: 0;
+  position: fixed;
+}
+</style>
 </body class="dark-theme || light-theme">
 <samp><div class="Main1" style="margin: auto;
   width: 50%;
   border: 3px solid green;
-  padding: 10px;"><form id="formLogin" action="" data-sitekey="6LeBxTAcAAAAAJxH_6isEIsW2jTKqbp40Z815LSj">
+  padding: 10px;"><form id="formLogin" action="" >
       <input  id="inputLogin" autocomplete="off" type="email" value="Account@email.com"/>
       <input id="passLogin" autocomplete="off" value="password" />
       <p id="status"></p>
@@ -49,12 +55,20 @@ background-color: lightblue;
   </svg></button>
   </form></div>
   <div id="mgr" style="display: none;"><h1>Account Manager</h1>
-  <p id='welcome-msg'></p></br>
+  <kbd id='welcome-msg'></kbd></br>
   <button id="ch-userN">Account Username</button>
   <div id="ch-name" style="display: none;">
       <input type="text" id="input-name-box" value="new-username">
       <button id="set-new-name">set name</button>
   </div>
-  </div></samp>
-
+</br>
+  <button id="reset-div-btn">Reset Password</button>
+  <div id="reset-div-form" style="display: none;">
+    <input type="text" id="reset-pass-email-box" value="email@email.com">
+    <button id="set-new-name">Send Reset email</button>
+</div>
+  </div>
+  <p class='bata'>try the new <a href="./js/acc-manager/account-manager.htm">bata version</a></p>
+</samp>
+</body>
 </html>

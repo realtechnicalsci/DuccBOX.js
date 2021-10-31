@@ -1,0 +1,1 @@
+function ReactINIT(){import './react.development.js';import './react-dom.development.js';}export default {ReactINIT};

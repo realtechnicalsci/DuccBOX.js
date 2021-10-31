@@ -2,5 +2,10 @@
   "dependencies": {
     "cannon": "github:schteppe/cannon.js",
     "firebase": "^8.8.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.3",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.8"
   }
 }

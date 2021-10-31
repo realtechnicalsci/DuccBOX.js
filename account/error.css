@@ -1,0 +1,12 @@
+@font-face {
+    font-family: droid-mono-sans;
+    src: url('droid-sans-mono.woff');
+    }
+.error{
+    font-family: droid-mono-sans;
+    color: rgb(190, 51, 51);
+}
+body{
+    background-color: #282c34;
+    text-align: center;
+}

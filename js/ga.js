@@ -1,4 +1,3 @@
-function GA() {
     (function() {
         var E;
         var g = window
@@ -2703,5 +2702,3 @@ function GA() {
     }
     ).call(this);
     
-}
-GA()

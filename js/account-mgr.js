@@ -2,6 +2,7 @@ import "./firebase/firebase-app.js";
 import "./firebase/firebase-auth.js";
 import "./firebase/firebase-analytics.js";
 import "./jquery.js";
+
 $(document).ready(function () {
   $(document).on("submit", "form", function () {
     return false;
@@ -18,7 +19,8 @@ const firebaseApp = firebase.initializeApp({
   appId: "1:1070773113218:web:578d79b68a8e7d1727ff9b",
   measurementId: "G-7WDEN5SZJ6",
 });
-firebase.analytics();
+const app = firebase;
+app.analytics();
 function uuidv4() {
   return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
     var r = (Math.random() * 16) | 0,
@@ -27,14 +29,13 @@ function uuidv4() {
   });
 }
 const uuid = uuidv4();
-const app = firebaseApp;
 const Name = document.getElementById("input");
 const Pass = document.getElementById("pass");
 const NameLogin = document.getElementById("inputLogin");
 const PassLogin = document.getElementById("passLogin");
 const formLogin = document.getElementById("ducc");
 const form = document.getElementById("form");
-const auth = firebase.auth();
+const auth = app.auth();
 const Status = document.getElementById("status");
 const CodeErr = document.getElementById("code");
 document.getElementById("login").onclick = () => {
@@ -42,9 +43,18 @@ document.getElementById("login").onclick = () => {
     .signInWithEmailAndPassword(NameLogin.value, PassLogin.value)
     .then(() => {
       auth.onAuthStateChanged(user => { if (user) {
+        document.title = 'Account Manager | DuccBOX';
+        document.getElementById('input-name-box').value = user.displayName;
         document.getElementById('welcome-msg').innerHTML = `Welcome ${user.displayName}`;
         document.getElementById('ch-userN').onclick = ()=>{
-document.getElementById('ch-name').style.display = 'block'
+document.getElementById('ch-name').stye.display = 'block'
+        }
+        document.getElementById('reset-div-btn').onclick = ()=>{
+          auth.sendPasswordResetEmail(document.getElementById('reset-pass-email-box').value).catch((error) => {
+            document.getElementById('status').innerHTML = error.message;
+            document.getElementById('code').innerHTML = error.code;
+          })
+          document.getElementById('reset-div-form').style.display = 'block'
         }
         document.getElementById('set-new-name').onclick = ()=>{
           user.updateProfile({
@@ -53,7 +63,7 @@ document.getElementById('ch-name').style.display = 'block'
         }
       }
     })
-
+         
     document.getElementById('mgr').style.display = 'block'
 }).catch((error) => {
 document.getElementById('status').innerHTML = error;

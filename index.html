@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
     <meta charset="UTF-8" />
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="icon" type="image/svg+xml" href="img/app.svg">
@@ -11,7 +9,7 @@
     <meta property="og:url" content="https://duccboxjs-281f7.web.app" />
     <meta property="og:image" content="https://duccboxjs-281f7.web.app/img/logo.png" />
     <meta property="og:site_name" content="" />
-    <meta property="og:description" content="DuccBOX M1 is an Open world sandbox made with WebGL/Three.js"/>
+    <meta property="og:description" content="DuccBOX M2 is an Open world sandbox made with WebGL/Three.js"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DuccBOX an open world sandbox</title>
@@ -19,19 +17,25 @@
     <script type="module" defer id='index' src="./js/app.js"></script>
   </head>
   <body>
-<div id ='Wrappder'><div style="position: fixed;" id='DuccBOX'>
-  <p class="rev" onclick="const params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
-  width=600,height=300,left=100,top=100`;
-  
-  window.open('/Milestone-builds.html', 'test', params);" id="rev">______|DuccBOX.js REV [REV_ID]</p>7
+    <div style="position: fixed; display: none; background-color: rgb(189, 13, 13);   opacity: 0.5;
+    " id="you-died">
+
+    </div>
+    <div id ='Wrappder'><div style="position: fixed;" id='DuccBOX'>
+  <p class="rev" onclick="const params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=600,height=300,left=100,top=100`;window.open('/Milestone-builds.html', 'test', params);" id="rev">______|DuccBOX.js REV [REV_ID]</p>7
   <br/>
   <p class="cords" id="cords"></p><br/>
   <p id="username"></p>
   <p id="prog"></p>
   <p id='id1'></p>
  <h1 id='kicked'></h1>
+ <p onclick="window.open('../account/index.html','New Tab',
+  'height=500,width=400,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');"><kbd>Account</kbd></p>
  <div id='Help' style="border-style: solid; position: fixed;">
    <samp><p>DuccBOX.js controls.</p>
+    <!--[if lte IE 8]>
+      <h1>Browser is ducced</h1>
+<![endif]-->
      <p><kbd>W</kbd>forward</p></br>
      <p><kbd>A</kbd>left</p></br>
      <p><kbd>S</kbd>backword</p></br>
@@ -42,10 +46,6 @@
      <p><kbd>L</kbd>Open Login Menu</p></br>
      <p><kbd onclick="document.getElementById('Help').style.display='none'">Close Help</kbd></br></samp>
  </div>
-  <input style="bottom: 0;
-  position: fixed;
-  display: none;" type="file"   id="MOD"><br/>
-  <br/>
   <div id="chat" style="position: fixed;
   bottom: 0;
   right: 0;
@@ -85,10 +85,6 @@
    </form>
  </br>
 </br>
-  <input type="text" id='new-email' value="email@email">
-  <input type="text" id="new-pass" value="pass">
-  <button id='Acc'>create Account</button>
-  <p id='new-login-status'></br>
    <p id='login-status'></br>
    <kbd onclick="document.getElementById('login-box').style.display = 'none'">Exit login form</kbd></samp>
     </div>
@@ -100,15 +96,6 @@
  </br>
  </br>
  </br>
- <script> window.addEventListener("keydown", function () {
-   switch (event.keyCode) {
-     case 52:
- document.getElementById('DuccBOXF3').style.display = 'none';
- document.getElementById('DuccBOX').style.display = 'block';
-       break;
-   }
- 
- })  </script>
  <div>
    <samp><kbd>DuccBOX.js 4.0 M2</kbd>
  </br>
@@ -121,5 +108,6 @@
  </div>
    </div></div>
    <noscript><h1>DuccBOX.js will not run without javaScript...</h1></noscript>
+ <script>window.addEventListener("keydown", function () {switch (event.keyCode) {case 52:document.getElementById('DuccBOXF3').style.display = 'none';document.getElementById('DuccBOX').style.display = 'block';break;}})</script>
   </body>
 </html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <link rel="icon" type="image/svg+xml" href="../../img/app.svg">
+  <script src="../reactjs/react.development.js"></script>
+  <script src="../reactjs/react-dom.development.js"></script>
+  <script src="../lib/babel.min.js"></script>
+  <script src="../jquery.js"></script>
+  <script src="../firebase/firebase-app.js"></script>
+  <script src="../firebase/firebase-auth.js"></script>
+  <script src="../firebase/firebase-analytics.js"></script>
+  <link href="./app.css" rel="stylesheet" />
+  <style>
+    .MainManager{
+      display: none;
+    }
+    .about{
+      bottom: 0;
+      left: 0;
+      position: fixed;
+      font-size: 10px;
+    }              
+    #account-manager,.account-manager-main{
+      border-style: solid;
+        }
+        .name-mgr{
+display: none;
+        }
+  </style>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      try {
+          const firebaseApp = firebase.initializeApp({
+        apiKey: "AIzaSyCk1yrVh0zTC8BBu-mirrHaqhaMGcg-6Xo",
+        authDomain: "duccboxjs-281f7.firebaseapp.com",
+        databaseURL: "https://duccboxjs-default-rtdb.firebaseio.com",
+        projectId: "duccboxjs",
+        storageBucket: "duccboxjs.appspot.com",
+        messagingSenderId: "1070773113218",
+        appId: "1:1070773113218:web:578d79b68a8e7d1727ff9b",
+        measurementId: "G-7WDEN5SZJ6",
+      });
+      const date = new Date()
+      let user
+      const app = firebase
+      const auth = app.auth();
+      app.analytics();
+      class App extends React.Component {
+        render() {
+          document.title = 'Account-manager | DuccBOX'
+          function login() {
+            auth.signInWithEmailAndPassword(document.getElementById('login-email').value, document.getElementById('login-pass').value)    
+            .then(() => {
+document.getElementById('main-manager').style.display = 'block'
+document.getElementById('login-form-box').remove()
+
+            })
+.catch((error) => {
+              document.getElementById('err').innerHTML = error;
+              document.getElementById('err').style.color = 'red';
+            })
+          }
+          auth.onAuthStateChanged(user1 => {
+            user = user1;
+           })
+          auth.onAuthStateChanged(user => { 
+  if (user) {
+  const name =  user.displayName;
+ document.getElementById('name-box').value= user.displayName;
+  document.getElementById('name').innerHTML = `Welcome ${user.displayName}!`;
+  document.getElementById('main-manager').style.display = 'block';
+document.getElementById('login-form-box').remove();
+        }
+      })
+          return <div className = 'App' >
+            <p className='about'>DuccBOX.js account manager built with react.js,babel,firebase</p>
+            <div className="App-header">
+                  <div id='account-manager-main' className="App-header" className='account-manager' >
+                    <div id='login-form-box'>
+                      <h3 className = 'Welcome'>DuccBOX.js account manager</h3>
+                    <p className='error-text' id='err'></p>
+                    <input  id="login-email"   defaultValue="Account@email.com"></input><br/>
+                    <input id="login-pass"   defaultValue="password"></input><br/>
+                    <button onClick={()=>{login()}}>Login</button>
+                        </div>  
+                        <div id='main-manager' className='MainManager'>
+                          
+<p id='name'></p><br/>
+<p className='time'>{new Date().toISOString().slice(0, 10)}</p>
+<button onClick={()=>{
+  auth.signOut().then(() => {
+    document.location.reload();
+})
+}}>logout</button><button onClick={()=>{
+ document.getElementById('name-mgr').style.display = 'block';
+}}>Name Manager</button>
+<div id='name-mgr' className='name-mgr'>
+  <input type="text" id='name-box' defaultValue='undefined' /><button onClick={()=>{
+  if (user) {
+    user.updateProfile({
+            displayName: `${    document.getElementById('name-box')
+.value}`
+          })
+   }else{
+    document.getElementById('name-box')
+.value = 'Session not valid'
+   }
+  }}>set name</button>
+  </div>
+
+                          </div>
+              </div>
+      </div>
+              </div>
+        }
+      }
+
+      ReactDOM.render(<App />, document.getElementById('root'))
+      } catch (error) {
+         alert(error)}
+    </script>
+  </body>
+</html>
